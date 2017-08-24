@@ -86,3 +86,34 @@ footer {
   left: inherit;
   right: 0;
 }
+.menu {
+  list-style-type: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 100%;
+  padding: 0 2vw;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.menu-top {
+  height: 70px;
+  background-color: #000;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.menu__item a {
+  color: rgba(255,255,255,0.8);
+  transition: 0.3s;
+  font-size: 16px;
+  font-family: 'Avenir Next Demi';
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.menu__item a:hover {
+  transition: 0.3s;
+  color: #fff;
+}
