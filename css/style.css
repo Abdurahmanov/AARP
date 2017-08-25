@@ -27,6 +27,24 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Proxima Nova Extrabold';
+  src: url("../fonts/Proxima Nova Extrabold.woff") format('woff'), url("../fonts/Proxima Nova Extrabold.ttf") format('truetype'), url("../fonts/Proxima Nova Extrabold.svg#Proxima Nova Extrabold") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova Semibold';
+  src: url("../fonts/Proxima Nova Semibold.woff") format('woff'), url("../fonts/Proxima Nova Semibold.ttf") format('truetype'), url("../fonts/Proxima Nova Semibold.svg#Proxima Nova Semibold") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova Extrabold Italic';
+  src: url("../fonts/Proxima Nova Extrabold Italic.woff") format('woff'), url("../fonts/Proxima Nova Extrabold Italic.ttf") format('truetype'), url("../fonts/Proxima Nova Extrabold Italic.svg#Proxima Nova Extrabold Italic") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 html {
   height: 100%;
   font-size: 16px;
@@ -50,6 +68,12 @@ footer {
 .page {
   max-width: 1440px;
   margin: 0 auto;
+}
+.header {
+  position: relative;
+}
+.header_mobile {
+  display: none;
 }
 .header__photo {
   display: -ms-flexbox;
@@ -86,6 +110,94 @@ footer {
   left: inherit;
   right: 0;
 }
+.header__inner {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+.header__top {
+  position: absolute;
+  left: 25vw;
+  bottom: -22vw;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% - 25vw);
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding-right: 2.5vw;
+}
+.header__tel a {
+  font-size: 3.6vw;
+  color: #fff;
+  font-family: 'Avenir Next Demi';
+}
+.header__tel-text {
+  font-size: 1.75vw;
+  color: #fff;
+  font-family: 'Avenir Next Demi';
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+.header__bottom {
+  position: absolute;
+  top: 22vw;
+  display: -ms-flexbox;
+  display: flex;
+  left: 12.5vw;
+  height: 14vw;
+}
+.header__text-top {
+  max-height: 100px;
+  height: 7vw;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 7vw;
+}
+.header__text-bottom {
+  max-height: 100px;
+  height: 7vw;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 7vw;
+}
+.header__title {
+  font-family: 'Proxima Nova Extrabold';
+  color: #fff;
+  font-size: 5vw;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  padding: 0 1.65vw;
+  background: rgba(0,0,0,0.7);
+}
+.header__description {
+  padding: 0 1.65vw;
+  background: rgba(0,0,0,0.7);
+  font-size: 2.25vw;
+  color: #fff;
+  font-family: 'Proxima Nova Semibold';
+}
+.header__description b {
+  color: #ef3829;
+  font-family: 'Proxima Nova Extrabold Italic';
+  font-style: italic;
+}
+.header__logo {
+  max-height: 200px;
+  padding: 40px;
+  background-color: #ef3829;
+  height: 14vw;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.header__logo a {
+  background: url("../img/logo-white.svg") no-repeat;
+  background-size: cover;
+  width: 250px;
+  display: block;
+  height: 67px;
+}
 .menu {
   list-style-type: none;
   display: -ms-flexbox;
@@ -116,4 +228,56 @@ footer {
 .menu__item a:hover {
   transition: 0.3s;
   color: #fff;
+}
+@media (min-width: 1440px) {
+  .header__title {
+    font-size: 70px;
+    padding: 0 24px;
+  }
+  .header__description {
+    padding: 0 24px;
+    font-size: 32px;
+  }
+  .header__bottom {
+    top: 320px;
+    left: 180px;
+    height: 200px;
+  }
+  .header__text-top {
+    line-height: 100px;
+  }
+  .header__text-bottom {
+    line-height: 100px;
+  }
+  .header__top {
+    padding-right: 35px;
+    left: 360px;
+    bottom: -320px;
+    width: calc(100% - 360px);
+  }
+  .header__tel a {
+    font-size: 52px;
+  }
+  .header__tel-text {
+    font-size: 25px;
+  }
+  .header__photo-item {
+    height: 320px;
+  }
+}
+@media (max-width: 1024px) {
+  .header_desktop {
+    display: none;
+  }
+  .header_mobile {
+    display: block;
+  }
+  .header__photo-item {
+    width: 33.3%;
+    height: 30vw;
+  }
+  .header__photo-small {
+    width: 16.5vw;
+    height: 16.5vw;
+  }
 }

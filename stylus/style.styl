@@ -36,6 +36,10 @@ footer {
 }
 
 .header{
+  position: relative;
+  &_mobile{
+    display: none
+  }
   &__photo{
     display flex
     flex-wrap wrap
@@ -69,6 +73,92 @@ footer {
       }
     }
   }
+  &__inner{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+  }
+  &__top{
+    position: absolute;
+    left: 25vw;
+    bottom: -22vw;
+    display: flex
+    width calc(100% - 25vw)
+    justify-content: space-between
+    padding-right 2.5vw
+  }
+  &__tel{
+    a{
+      font-size: 3.6vw;
+      color: #fff;
+      font-family: 'Avenir Next Demi';
+    }
+    &-text{
+      font-size: 1.75vw;
+      color: #fff;
+      font-family: 'Avenir Next Demi';
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+    }
+  }
+  &__bottom{
+    position: absolute;
+    top: 22vw;
+    display: flex
+    left: 12.5vw;
+    height 14vw
+  }
+  &__text{
+    &-top{
+      max-height: 100px;
+      height: 7vw;
+      display: flex;
+      line-height:7vw
+    }
+    &-bottom{
+      max-height: 100px;
+      height: 7vw;
+      display: flex
+      line-height:7vw
+    }
+  }
+  &__title{
+    font-family: 'Proxima Nova Extrabold';
+    color: #fff
+    font-size 5vw
+    letter-spacing 1.3px
+    text-transform uppercase
+    padding: 0 1.65vw;
+    background: rgba(0,0,0,0.7);
+  }
+  &__description{
+    padding: 0 1.65vw;
+    background: rgba(0,0,0,0.7);
+    font-size: 2.25vw;
+    color: #fff;
+    font-family: 'Proxima Nova Semibold';
+    b{
+      color #ef3829
+      font-family: 'Proxima Nova Extrabold Italic';
+      font-style: italic;
+    }
+  }
+  &__logo{
+    max-height: 200px;
+    padding: 40px;
+
+    background-color: #ef3829;
+    height: 14vw;
+    display: flex;
+    align-items: center;
+    a{
+      background url("../img/logo-white.svg") no-repeat
+      background-size cover
+      width 250px
+      display: block
+      height 67px
+    }
+  }
 }
 
 .menu{
@@ -100,3 +190,69 @@ footer {
     }
   }
 }
+
+@media (min-width: 1440px){
+  .header{
+    &__title{
+      font-size 70px
+      padding: 0 24px
+    }
+    &__description{
+      padding: 0 24px;
+      font-size: 32px;
+    }
+    &__bottom{
+      top: 320px;
+      left: 180px;
+      height 200px
+    }
+    &__text{
+      &-top{
+        line-height 100px
+      }
+      &-bottom{
+        line-height:100px
+      }
+    }
+    &__top{
+      padding-right 35px
+      left: 360px;
+      bottom: -320px;
+      width: calc(100% - 360px);
+    }
+    &__tel{
+      a{
+        font-size: 52px;
+      }
+      &-text{
+        font-size: 25px;
+      }
+    }
+    &__photo{
+      &-item{
+        height:320px
+      }
+    }
+  }
+}
+
+  @media(max-width: 1024px){
+    .header{
+      &_desktop{
+        display: none
+      }
+      &_mobile{
+        display: block;
+      }
+      &__photo{
+        &-item{
+          width 33.3%
+          height 30vw
+        }
+        &-small{
+          width: 16.5vw;
+          height: 16.5vw;
+        }
+      }
+    }
+  }
